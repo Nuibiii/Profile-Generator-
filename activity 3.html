@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Profile Generator</title>
+</head>
+<body>
+    <input id="name" placeholder="Enter your name" />
+    <input id="age" placeholder="Enter your age" />
+    <input id="color" placeholder="Enter your favorite color" />
+    <button id="generateBtn">Generate Profile</button>
+
+    <div id="profileOutput"></div>
+    <script>
+        const generateBtn = document.getElementById("generateBtn");
+        const nameInput = document.getElementById("name");
+        const ageInput = document.getElementById("age");
+        const colorInput = document.getElementById("color");
+        const profileOutput = document.getElementById("profileOutput");
+
+        generateBtn.addEventListener("click", () => {
+            const name = nameInput.value;
+            const age = ageInput.value;
+            const color = colorInput.value;
+
+            profileOutput.innerHTML = `
+                <h3>${   name}</h3>
+                <p>Age: ${age}</p>
+                <p style="color: ${color}">Favorite Color: ${color}</p>
+                `;
+        })
+            </script>
+
+
+</body>
+</html>
